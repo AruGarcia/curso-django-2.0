@@ -59,7 +59,7 @@ class UserAdmin(admin.ModelAdmin):
     form = UserChangeForm
     add_form = UserCreationForm
     change_password_form = AdminPasswordChangeForm
-    list_display = ("email", "first_name",  "is_staff")
+    list_display = ("email", "first_name", "is_staff")
     list_filter = ("is_staff", "is_superuser", "is_active", "groups")
     search_fields = ("first_name", "email")
     ordering = ("first_name",)
@@ -194,8 +194,7 @@ class UserAdmin(admin.ModelAdmin):
 
         return TemplateResponse(
             request,
-            self.change_user_password_template
-            or "admin/auth/user/change_password.html",
+            self.change_user_password_template or "admin/auth/user/change_password.html",
             context,
         )
 
@@ -214,4 +213,3 @@ class UserAdmin(admin.ModelAdmin):
             request.POST = request.POST.copy()
             request.POST["_continue"] = 1
         return super().response_add(request, obj, post_url_continue)
-
