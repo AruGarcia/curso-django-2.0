@@ -1,4 +1,4 @@
-import django.contrib.auth.base_user
+from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.core.mail import send_mail
 from django.db import models
@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 
-class UserManager(django.contrib.auth.base_user.BaseUserManager):
+class UserManager(BaseUserManager):
     use_in_migrations = True
 
     def _create_user(self, email, password, **extra_fields):
@@ -42,7 +42,7 @@ class UserManager(django.contrib.auth.base_user.BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 
-class User(django.contrib.auth.base_user.AbstractBaseUser, PermissionsMixin):
+class User(AbstractBaseUser, PermissionsMixin):
     """
     App base user class.
 
