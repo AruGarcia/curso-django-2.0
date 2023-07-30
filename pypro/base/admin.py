@@ -194,7 +194,8 @@ class UserAdmin(admin.ModelAdmin):
 
         return TemplateResponse(
             request,
-            self.change_user_password_template or "admin/auth/user/change_password.html",
+            self.change_user_password_template
+            or "admin/auth/user/change_password.html",
             context,
         )
 
