@@ -5,5 +5,4 @@ from django.shortcuts import render
 
 
 def home(request):
-    raise ValueError
     return HttpResponse('<html><body>Ola, Django</body></html>')
