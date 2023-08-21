@@ -1,5 +1,4 @@
 import pytest
-from django.test import Client
 from django.urls import reverse
 
 from pypro.django_assertions import assert_contains
@@ -21,3 +20,7 @@ def test_title(resp):
 
 def test_home_link(resp):
     assert_contains(resp, f'href="{reverse("base:home")}">Python Pro</a>')
+
+
+def test_email_link(resp):
+    assert_contains(resp, f'href="mailto:pythonprobrasil@gmail.com"')

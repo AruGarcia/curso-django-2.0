@@ -35,29 +35,7 @@
 {% block body%}
 {% endblock body %}
 
-<footer class="main-footer mt-5 pt-4 mb-5 text-light">
-  <div class="container">
-	  <div class="row">
-		  <div class="col">
-			  <h3>Entre em Contato</h3>
-			  <address>
-				  +55 21 99999-0000
-				  <br/>
-				  <a href="mailto:pythonprobrasil@gmail.com" class="text-light">pythonprobrasil@gmail.com</a>
-			  </address>
-		  </div>
-	  </div>
-  </div>
-  <div class="rights pb-4">
-	  <div class="container">
-		  <div class="row">
-			  <div class="col">
-				  {% now 'Y' %} Python Pro. Todos os direitos reservados.
-			  </div>
-		  </div>
-	  </div>
-  </div>
-</footer>
+{% include 'base/footer.html' with contato_email='pythonprobrasil@gmail.com' only %}
 
 </body>
 </html>
