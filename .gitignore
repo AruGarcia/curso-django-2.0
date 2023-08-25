@@ -214,5 +214,9 @@ ENV/
 # fly config file
 fly.toml
 
+# postegres files for loval development
+
+.pgdata
+
 
 # End of https://www.gitignore.io/api/macos,linux,django,python,pycharm
