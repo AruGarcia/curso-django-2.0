@@ -11,15 +11,16 @@ jobs:
     env:
       PIPENV_NO_INHERIT: 1
       PIPENV_IGNORE_VIRTUALENVS: 1
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/cursodjango
     runs-on: ubuntu-latest
 
     services:
       postgres:
-        image: postgres:11.5
+        image: postgres
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: postgres
+          POSTGRES_DB: cursodjango
         ports: [ '5432:5432' ]
 
     steps:
