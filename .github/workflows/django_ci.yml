@@ -15,11 +15,11 @@ jobs:
 
     services:
       postgres:
-        image: postgres:11.5
+        image: postgres
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: postgres
+          POSTGRES_DB: cursodjango_database
         ports: [ '5432:5432' ]
 
     steps:
