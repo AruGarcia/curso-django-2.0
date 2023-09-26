@@ -15,6 +15,8 @@ django-debug-toolbar = "*"
 sentry-sdk = "*"
 storage = "*"
 django-ordered-model = "*"
+django-extensions = "*"
+ipython = "*"
 
 [dev-packages]
 flake8 = "*"
