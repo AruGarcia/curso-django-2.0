@@ -4,8 +4,8 @@ from django.urls import reverse
 
 @pytest.fixture
 def resp(client):
-    return client.get(reverse('turma:indice'))
+    return client.get(reverse('turmas:indice'))
 
 
-def status_code(resp):
+def test_status_code(resp):
     assert resp.status_code == 200
