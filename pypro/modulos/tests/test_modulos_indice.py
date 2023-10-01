@@ -18,6 +18,7 @@ def aulas(modulos):
         aulas.extend(baker.make(Aula, 3, modulo=modulo))
     return aulas
 
+
 @pytest.fixture
 def resp(client, modulos, aulas):
     resp = client.get(reverse('modulos:indice'))
