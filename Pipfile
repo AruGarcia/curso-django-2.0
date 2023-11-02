@@ -3,27 +3,27 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
-[packages]
-django = "*"
-gunicorn = "*"
-python-decouple = "*"
-dj-database-url = "*"
-psycopg2-binary = "*"
-django-s3-folder-storage = "*"
-collectfast = "*"
-django-debug-toolbar = "*"
-sentry-sdk = "*"
-storage = "*"
-django-ordered-model = "*"
-django-extensions = "*"
-ipython = "*"
+    [packages]
+    django = "*"
+    gunicorn = "*"
+    python-decouple = "*"
+    dj-database-url = "*"
+    psycopg2-binary = "*"
+    django-s3-folder-storage = "*"
+    collectfast = "*"
+    django-debug-toolbar = "*"
+    sentry-sdk = "*"
+    storage = "*"
+    django-ordered-model = "*"
+    django-extensions = "*"
+    ipython = "*"
 
-[dev-packages]
-flake8 = "*"
-pytest-django = "*"
-pytest-cov = "*"
-codecov = "*"
-model-bakery = "*"
+    [dev-packages]
+    flake8 = "*"
+    pytest-django = "*"
+    pytest-cov = "*"
+    codecov = "*"
+    model-bakery = "*"
 
-[requires]
-python_version = "3.11"
+    [requires]
+    python_version = "3.11"
